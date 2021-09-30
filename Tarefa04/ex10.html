@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 10</title>
+</head>
+
+<body>
+    <script type="text/javascript ">
+        var nome = "";
+        var altura = 0;
+        for (let i = 0; i < 5; i++) {
+            var nomeAux = prompt("Nome: ", "");
+            var alturaAux = prompt("Altura (cm): ", 150);
+            if (parseFloat(alturaAux) > altura) {
+                nome = nomeAux;
+                altura = parseFloat(alturaAux);
+            }
+        }
+        document.write("A pessoa mais alta é o(a) " + nome + " com altura igual a " + altura + "cm.");
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 02</title>
+</head>
+
+<body>
+    <form>
+        <input type="text" class='ip-text' size=50><br><br>
+        <input type="text" class='ip-text' size=50><br><br>
+        <input type="text" class='ip-text' size=50><br><br>
+        <input type="text" class='ip-text' size=50><br><br>
+        <input type="text" class='ip-text' size=50><br><br>
+        <input type="text" class='ip-text' size=50><br><br>
+        <input type="text" class='ip-text' size=50><br><br>
+        <input type="text" class='ip-text' size=50><br><br>
+        <input type="text" class='ip-text' size=50><br><br>
+        <input type="text" class='ip-text' size=50><br><br>
+        <input type="button" value="Listar" onclick="listar()">
+    </form>
+    <ol id='lista'></ol>
+    <script type="text/javascript">
+        function listar() {
+            var textField = document.getElementsByClassName('ip-text');
+            var compras = [];
+            for (var i = 0; i < textField.length; i++) {
+                if (textField[i].value != "") {
+                    compras.push(textField[i].value);
+                    textField[i].value = "";
+                }
+            }
+            compras.sort();
+            var ol = document.getElementById('lista');
+            ol.innerHTML = '';
+            for (var i = 0; i < compras.length; i++) {
+                var li = document.createElement('li');
+                li.appendChild(document.createTextNode(compras[i]));
+                ol.appendChild(li);
+            }
+        }
+    </script>
+</body>
+
+</html>

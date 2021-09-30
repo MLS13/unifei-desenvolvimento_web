@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 04</title>
+</head>
+
+<body>
+    <script type="text/javascript ">
+        var strSalario = prompt("Entre com o seu salário: ", 1200);
+        var salario = parseFloat(strSalario);
+        var percentual = 0;
+        if (salario <= 280.00) {
+            var percentual = 0.2;
+        } else if (salario <= 700.00) {
+            var percentual = 0.15;
+        } else if (salario <= 1500.00) {
+            var percentual = 0.10;
+        } else {
+            var percentual = 0.05;
+        }
+        var aumento = salario * percentual;
+        document.write("Salário antes do reajuste: R$ " + salario.toFixed(2));
+        document.write("<br>Percentual de aumento: " + (percentual * 100).toFixed(2) + "%");
+        document.write("<br>Valor do aumento: R$ " + aumento.toFixed(2));
+        document.write("<br>Salário após o reajuste: R$ " + (salario + aumento).toFixed(2));
+    </script>
+</body>
+
+</html>

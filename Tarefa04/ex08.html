@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 08</title>
+</head>
+
+<body>
+    <script type="text/javascript ">
+        var data = prompt("Entre com uma data (dd/mm/yyyy): ", "01/01/2000");
+        var dataSplit = data.split('/');
+        var dataAux = new Date(dataSplit[2], dataSplit[1] - 1, dataSplit[0]);
+        var mes = "";
+        switch (dataAux.getMonth()) {
+            case 0:
+                mes = "Janeiro";
+                break;
+            case 1:
+                mes = "Fevereiro";
+                break;
+            case 2:
+                mes = "Março";
+                break;
+            case 3:
+                mes = "Abril";
+                break;
+            case 4:
+                mes = "Maio";
+                break;
+            case 5:
+                mes = "Junho";
+                break;
+            case 6:
+                mes = "Julho";
+                break;
+            case 7:
+                mes = "Agosto";
+                break;
+            case 8:
+                mes = "Setembro";
+                break;
+            case 9:
+                mes = "Outubro";
+                break;
+            case 10:
+                mes = "Novembro";
+                break;
+            case 11:
+                mes = "Dezembro";
+                break;
+            default:
+                mes = "Janeiro";
+                break;
+        }
+        document.write(dataAux.getDate() + " de " + mes + " de " + dataAux.getFullYear());
+    </script>
+</body>
+
+</html>

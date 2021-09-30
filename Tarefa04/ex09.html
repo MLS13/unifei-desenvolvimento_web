@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 09</title>
+</head>
+
+<body>
+    <script type="text/javascript ">
+        var numeros = new Array();
+        while (true) {
+            var num = prompt("Digite um número (p/ sair = 0)", 0);
+            var numFloat = parseFloat(num);
+            if (numFloat == 0) break;
+            else numeros.push(numFloat);
+        }
+        var tamList = numeros.length;
+        var soma = 0;
+        for (let i = 0; i < tamList; i++) {
+            soma += numeros[i];
+        }
+        document.write("A média dos valores é igual a: " + (soma / tamList));
+    </script>
+</body>
+
+</html>

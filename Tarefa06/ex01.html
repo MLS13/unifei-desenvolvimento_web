@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 01</title>
+</head>
+
+<body>
+    <table id='tabela01' width='40%' border-collapse='collapse' border='2px solid black' align="center">
+        <tr>
+            <th class='t-livro'>Livro</th>
+            <th class='t-pagina'>Páginas</th>
+        </tr>
+        <tr>
+            <td class='t-livro'>O ladrão de raios</td>
+            <td class='t-pagina'>377</td>
+        </tr>
+        <tr>
+            <td class='t-livro'>A maldição do titã</td>
+            <td class='t-pagina'>273</td>
+        </tr>
+        <tr>
+            <td class='t-livro'>As vantagens de ser invisível</td>
+            <td class='t-pagina'>224</td>
+        </tr>
+        <tr>
+            <td class='t-livro'>Por lugares incríveis</td>
+            <td class='t-pagina'>355</td>
+        </tr>
+        <tr>
+            <td class='t-livro'>A Culpa É das Estrelas</td>
+            <td class='t-pagina'>288</td>
+        </tr>
+    </table>
+    <script type="text/javascript">
+        var t_livro = document.getElementsByClassName('t-livro');
+        var t_pagina = document.getElementsByClassName('t-pagina');
+        for (var i = 0; i < t_livro.length; i++) {
+            t_livro[i].addEventListener('click', () => {
+                for (var i = 0; i < t_livro.length; i++) {
+                    if (t_livro[i].style.background == 'blue')
+                        t_livro[i].style.background = 'white';
+                    else
+                        t_livro[i].style.background = 'blue';
+                }
+                for (var i = 0; i < t_pagina.length; i++) {
+                    t_pagina[i].style.background = 'white';
+                }
+            });
+        }
+        for (var i = 0; i < t_pagina.length; i++) {
+            t_pagina[i].addEventListener('click', () => {
+                for (var i = 0; i < t_livro.length; i++) {
+                    t_livro[i].style.background = 'white';
+                }
+                for (var i = 0; i < t_pagina.length; i++) {
+                    if (t_pagina[i].style.background == 'green')
+                        t_pagina[i].style.background = 'white';
+                    else
+                        t_pagina[i].style.background = 'green';
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

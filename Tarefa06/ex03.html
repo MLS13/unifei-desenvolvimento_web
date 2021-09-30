@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 03</title>
+    <style type="text/css">
+        img.zoom1 {
+            width: 50px;
+            height: 50px;
+        }
+        
+        img.zoom2 {
+            width: 100px;
+            height: 100px;
+        }
+        
+        img.zoom3 {
+            width: 150px;
+            height: 150px;
+        }
+        
+        img.botao {
+            width: 25px;
+            height: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Galeria de imagens
+        <img class='botao' id='zoom_in' src='images/zoom-in.png'>
+        <img class='botao' id='zoom_out' src='images/zoom-out.png'>
+    </h1>
+
+    <img class='imagem zoom1' src='images/unifei.jpg'>
+    <img class='imagem zoom1' src='images/basilica_sao_pedro.jpg'>
+    <img class='imagem zoom1' src='images/catedral_milao.jpg'>
+    <img class='imagem zoom1' src='images/cristo_redentor.jpg'>
+    <img class='imagem zoom1' src='images/lincoln_memorial.jpg'>
+    <img class='imagem zoom1' src='images/taj_mahal.jpg'>
+    <img class='imagem zoom1' src='images/torre_eiffel.jpg'>
+    <img class='imagem zoom1' src='images/las_vegas.jpg'>
+    <img class='imagem zoom1' src='images/pao_de_acucar.jpg'>
+    <img class='imagem zoom1' src='images/arena_corinthians.jpg'>
+
+    <script type="text/javascript">
+        document.getElementById('zoom_in').addEventListener('click', () => {
+            var imagens = document.getElementsByClassName("imagem");
+            for (var i = 0; i < imagens.length; i++) {
+                if (imagens[i].className.indexOf('1') != -1) {
+                    imagens[i].classList.remove('zoom1');
+                    imagens[i].classList.add('zoom2');
+                } else if (imagens[i].className.indexOf('2') != -1) {
+                    imagens[i].classList.remove('zoom2');
+                    imagens[i].classList.add('zoom3');
+                }
+            }
+        });
+        document.getElementById('zoom_out').addEventListener('click', () => {
+            var imagens = document.getElementsByClassName("imagem");
+            for (var i = 0; i < imagens.length; i++) {
+                if (imagens[i].className.indexOf('3') != -1) {
+                    imagens[i].classList.remove('zoom3');
+                    imagens[i].classList.add('zoom2');
+                } else if (imagens[i].className.indexOf('2') != -1) {
+                    imagens[i].classList.remove('zoom2');
+                    imagens[i].classList.add('zoom1');
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

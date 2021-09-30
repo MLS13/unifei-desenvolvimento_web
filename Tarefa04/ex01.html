@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 01</title>
+    <script type="text/javascript">
+        function encontrarMaiorString(str) {
+            var strSplit = str.split(" ");
+            var nLetras = 0;
+            var maiorPalavra = "";
+            strSplit.forEach(element => {
+                if (element.length > nLetras) {
+                    nLetras = element.length;
+                    maiorPalavra = element;
+                }
+            });
+            return maiorPalavra;
+        }
+    </script>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var texto = prompt("Entre com um texto: ", "");
+        var str = encontrarMaiorString(texto);
+        document.write("A maior palavra presente no texto '" + texto + "' é: " + str);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 03</title>
+    <script type="text/javascript">
+        function calcular(num1, num2) {
+            document.getElementById('label-soma').innerText = num1 + " + " + num2;
+            document.getElementById('soma').innerText = parseInt(num1) + parseInt(num2);
+            document.getElementById('label-produto').innerText = num1 + " * " + num2;
+            document.getElementById('produto').innerText = parseInt(num1) * parseInt(num2);
+            document.getElementById('label-divisao').innerText = num1 + " / " + num2;
+            document.getElementById('divisao').innerText = parseInt(num1) / parseInt(num2);
+            document.getElementById('label-resto').innerText = num1 + " % " + num2;
+            document.getElementById('resto').innerText = parseInt(num1) % parseInt(num2);
+        }
+    </script>
+</head>
+
+<body>
+    <table border="1px" align="center">
+        <tr>
+            <th>Operação</th>
+            <th>Valor</th>
+        </tr>
+        <tr>
+            <td id='label-soma'> + </td>
+            <td id='soma'></td>
+        </tr>
+        <tr>
+            <td id='label-produto'>*</td>
+            <td id='produto'></td>
+        </tr>
+        <tr>
+            <td id='label-divisao'>*</td>
+            <td id='divisao'></td>
+        </tr>
+        <tr>
+            <td id='label-resto'>%</td>
+            <td id='resto'></td>
+        </tr>
+    </table>
+    <script type="text/javascript ">
+        var num1 = prompt("Entre com o primeiro número: ", 2);
+        var num2 = prompt("Entre com o segundo número: ", 2);
+        calcular(num1, num2);
+    </script>
+</body>
+
+</html>
